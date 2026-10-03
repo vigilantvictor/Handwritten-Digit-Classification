@@ -1,0 +1,12 @@
+.thought-line { color: var(--muted); font-size: 13px; }
+.thought-line__head { display: flex; align-items: center; gap: 9px; }
+.thought-line__glyph { width: 17px; height: 17px; color: var(--accent); display: inline-flex; }
+.thought-line__breath { background: linear-gradient(100deg, var(--muted) 25%, var(--text) 50%, var(--muted) 75%); background-size: 240% 100%; color: transparent; background-clip: text; animation: thought-shimmer 1.8s linear infinite; }
+.thought-line__timer { font-variant-numeric: tabular-nums; opacity: .64; margin-left: auto; }
+.thought-line__trace { display: grid; gap: 7px; margin: 10px 0 0 26px; font-size: 12px; }
+.thought-line__step { display: flex; align-items: center; gap: 7px; opacity: .76; }
+.thought-line__mark { width: 13px; height: 13px; color: var(--accent); display: inline-flex; }
+.thought-line__pulse { display: block; width: 6px; height: 6px; margin: auto; border-radius: 50%; background: var(--accent); animation: thought-pulse 1.4s ease-in-out infinite; }
+@keyframes thought-shimmer { to { background-position: -120% 0; } }
+@keyframes thought-pulse { 50% { opacity: .38; transform: scale(.75); } }
+@media (prefers-reduced-motion: reduce) { .thought-line__breath, .thought-line__pulse { animation: none; } }

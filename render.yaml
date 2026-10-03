@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: digit-studio
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    healthCheckPath: /api/health
